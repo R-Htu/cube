@@ -1,0 +1,142 @@
+*{
+     padding: 0;
+     margin: 0;
+     text-decoration: none;
+     box-sizing: border-box;
+}
+html {
+     font-size: 62.5%;
+}
+.container {
+     width: 100%;
+     height: 100vh;
+     background:radial-gradient( rgba(0,223,0,.1),rgba(233,0,46,.3),rgba(0,45,220,.1)), url(images/spiderman2.jpg) center no-repeat;
+     background-size: cover;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     
+}
+.cube-wrapper {
+     perspective: 100rem;
+     position: absolute;
+}
+.cube {
+   width: 30rem;
+   height: 30rem;
+   transform-style: preserve-3d;
+   transform: rotateY(91deg);
+
+}
+.front-side, .back-side {
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     transform-style: preserve-3d;
+     background-color: aliceblue;
+}
+.front-side {
+  
+     transform:translateZ(15rem);
+}
+.front-side::before, .front-side::after {
+     content: "";
+     width: 100%;
+     height: 100%;
+     background-color: brown;
+     position: absolute;
+}
+.front-side::before{
+     top: 0;
+     left: 0;
+     transform:rotateX(-90deg);
+     transform-origin: top;
+     background: url('https://www.atozflowers.com/wp-content/uploads/2017/11/bloom-blossom-close-up-863963-1024x683.jpg') center no-repeat;
+     background-size: cover;
+     /* object-fit: cover; */
+}
+.front-side::after{
+     bottom: 0;
+     left: 0;
+     transform:rotateX(90deg);
+     transform-origin: bottom;
+     background: url('https://th.bing.com/th/id/OIP.1Ve6L2f20Eh4xL5m1EA9KwHaEK?pid=Api&rs=1') center no-repeat;
+     background-size: cover;
+     /* object-fit: contain; */
+}
+.front-side img, .back-side img {
+     width: 100%;
+     height: 100%;
+}
+.back-side {
+     background-color: rgb(56, 219, 124);
+     transform:translateZ(-15rem)
+}
+.back-side::before, .back-side::after {
+     content: "";
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     background-color: brown;
+    
+}
+.back-side::before {
+     transform: rotateY(-90deg);
+     left: 0;
+     top: 0;
+     transform-origin: left;
+     background: url('https://media.istockphoto.com/photos/roses-picture-id489516500?k=6&m=489516500&s=612x612&w=0&h=yWs_F0aE3G1hietuwdXpf-aSGn18iHk3IP_lndNMr_g=') center no-repeat;
+     background-size: cover;
+    
+}
+.back-side::after {
+     transform: rotateY(90deg);
+     right: 0;
+     top: 0;
+     transform-origin: right;
+     background: url('https://thewowstyle.com/wp-content/uploads/2015/04/1772040pictures-of-flowers1.jpg') center no-repeat;
+     background-size: cover;
+     /* object-fit: contain; */
+}
+
+.controls {
+     position: absolute;
+     top: 10rem;
+    
+}
+.controls a {
+     font-size: 3rem;
+     width: 10%;
+     height: 10%;
+     margin:1rem;
+     background:radial-gradient( black, rgba(98, 55, 179, 0.6), rgba(13, 198, 211, 0.9));
+     padding: 1.9rem;
+     border-radius: 50%;
+     color: #fff;
+
+}
+.controls a:nth-child(5) i{
+     transform: rotateZ(45deg);
+}
+.controls a:nth-child(6) i{
+     transform: rotateZ(-45deg);
+}
+@media screen and (max-width: 600px) {
+    .cube {
+         width: 20rem;
+         height: 20rem;
+    }
+    .controls {
+         text-align: center;
+        
+    }
+    .controls a{
+        display: inline-block;
+        padding: 1rem;
+    }
+    .back-side, .front-side, .front-side::before, .front-side::after, .back-side::after, .back-side::before, img {
+     content: "";
+     width: 20rem;
+     height: 20rem;
+}
+   }

@@ -122,9 +122,11 @@ html {
      transform: rotateZ(-45deg);
 }
 @media screen and (max-width: 600px) {
-   
+ 
     .controls {
          text-align: center;
+         top:1rem;
+         margin-bottom: 2rem;
         
     }
     .controls a{

@@ -48,3 +48,9 @@ document.querySelector('.pause').addEventListener('click', ()=>{
   rot();
   
 })
+// git init 
+//git status
+// git add *
+// git commit -m "write sth"
+// git push -u origin master
+//git remote set-url git@github.com:gitusername/repository.git

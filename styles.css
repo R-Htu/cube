@@ -122,10 +122,7 @@ html {
      transform: rotateZ(-45deg);
 }
 @media screen and (max-width: 600px) {
-    .cube {
-         width: 20rem;
-         height: 20rem;
-    }
+   
     .controls {
          text-align: center;
         
@@ -134,9 +131,5 @@ html {
         display: inline-block;
         padding: 1rem;
     }
-    .back-side, .front-side, .front-side::before, .front-side::after, .back-side::after, .back-side::before, img {
-     content: "";
-     width: 20rem;
-     height: 20rem;
-}
+ 
    }

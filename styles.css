@@ -130,8 +130,22 @@ html {
         
     }
     .controls a{
-        display: inline-block;
-        padding: 1rem;
+     display: inline-block;
+     position: relative;
+     
     }
- 
+    .controls a i {
+         font-size: 1.5rem;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+     
+    }
+    .controls a:nth-child(5) i{
+     transform: rotateZ(45deg) translateX(-12px);
+}
+   .controls a:nth-child(6) i{
+     transform: rotateZ(-45deg)translateY(-12px);
+}
    }
